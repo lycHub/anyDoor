@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "supervisor index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Madao",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "supervisor": "^0.12.0"
+  }
+}

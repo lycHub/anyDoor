@@ -1,16 +1,20 @@
-const http = require('http');
-const chalk = require('chalk');
+const program = require('commander');
+const Server = require('./app');
+// .command('anyDoor [options]')
+program
+  .usage('anyDoor [options] <file ...>')
+  .option('-P, --port <n>', 'port,default=3000')
+  .option('-H, --hostname  [value]', 'hostname,default=localhost')
+  .option('-D, --dir  [value]', 'root path, default=process.cwd()')
+  .option('-O, --open', 'Open browser automatically')
+  .version('0.0.1')
+  .parse(process.argv);
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const config = {
+  port: program.port || 3000,
+  hostname: program.hostname || 'localhost',
+  root: program.dir || process.cwd(),
+  open: program.open || false
+};
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('Hello World XXX');
-});
-
-server.listen(port, hostname, () => {
-  const addr = `http://${hostname}:${port}`;
-  console.info(`Server running at ${chalk.green(addr)}`);
-});
+new Server(config).start();

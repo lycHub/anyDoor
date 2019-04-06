@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <title><%= title %></title>
+  <link rel="stylesheet" type="text/css" href="" />
+</head>
+<body>
+<ul>
+  <% for (let i=0; i<files.length; i++) { %>
+    <li><a href= '../<%=dir %><%=files[i] %>' target="_blank"><%= files[i] %></a></li>
+  <% } %>
+</ul>
+</body>
+</html>

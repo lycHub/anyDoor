@@ -1,9 +1,10 @@
 # anyServer
-## install
-```
-npm i anyServer -g
-```
 ## usage
+```
+git clone https://github.com/lycHub/anyServer.git
+npm i
+```
+## cli
 ```
 anyServer # 把当前文件夹作为静态资源服务器根目录
 

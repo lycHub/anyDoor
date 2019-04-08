@@ -13,4 +13,6 @@ anyServer --port(-P) 8080 # 设置端口号为 8080
 anyServer --hostname(-H) localhost # 设置 host 为 localhost
 
 anyServer --dir(-D) C:/Users # 设置根目录为 C:/Users
+
+anyServer --open(-O) 自动打开浏览器
 ```
